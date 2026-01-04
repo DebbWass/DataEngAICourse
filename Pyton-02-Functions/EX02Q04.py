@@ -1,3 +1,11 @@
+
+
+amount = int(input('Insert the change amount'))
+
+changeMethod(amount)
+
+
+
 def changeMethod(amount):
     
     while amount > 0:
@@ -23,7 +31,3 @@ def changeMethod(amount):
         else:
             print(f'In 1 : {amount//1}')
             amount = amount%1
-
-amount = int(input('Insert the change amount'))
-
-changeMethod(amount)

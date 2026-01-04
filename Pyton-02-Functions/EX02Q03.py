@@ -1,4 +1,4 @@
-def digitCount(num):
+def digitCount(num) -> int:
     digCounter = 0
     
     while num>1:
