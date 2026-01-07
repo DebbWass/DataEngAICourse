@@ -11,6 +11,7 @@ class Bank():
         self.address = address
         self.customers = []
         self.number_of_clients = 0
+        
     
     #add cust to bank:
     def register_client(self,cust):
@@ -44,10 +45,15 @@ class Bank():
             print(f"Found: {customer}")
         else:
             print("account not found.")
+            
+    #bank total balance
+    def CalcBankBalance(self):
+        bank_total_balance = 0
+        for c in self.customers:
+            bank_total_balance+=c.CalcCustBalance()
+        return bank_total_balance
     
-    
-    
-    
+       
       
 if __name__== '__main__':
     b1=Bank(12,615,'Herzl 185 Rehovot')
@@ -57,6 +63,7 @@ if __name__== '__main__':
     print(cust1)
     b1.register_client(cust1)
     print(f'total custs in Bank : {b1.number_of_clients}')
+    
     #deposit to account
     Acc.Account.deposit(cust1.accounts[0],500)
     print(b1.PrintCustList())
@@ -69,3 +76,17 @@ if __name__== '__main__':
     cust1.FindAcc(12,615,123115)
     b1.FindAccount(12,615,123115)
     
+    #add anothe account for cust1:
+    cust1.CreateAccount(Acc.Account(b1.bank_num,b1.branch_num,123180))
+    Acc.Account.deposit(cust1.accounts[1],500)
+    print(cust1)
+    print(cust1.CalcCustBalance())
+    
+    #register new cust:
+    cust2 = Cust.Customer('Jack',112585)
+    cust2.CreateAccount(Acc.Account(b1.bank_num,b1.branch_num,125854))
+    b1.register_client(cust2)
+    Acc.Account.deposit(cust2.accounts[0],1500)
+    print(f'total custs in Bank : {b1.number_of_clients}')
+    print(b1.PrintCustList())
+    print(b1.CalcBankBalance())

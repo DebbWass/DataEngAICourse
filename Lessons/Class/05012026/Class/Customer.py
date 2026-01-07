@@ -6,7 +6,7 @@ class Customer():
         self.id = id
         self.accounts=[]
         self.account_balance = 0
-    
+        
     
     def __repr__(self):
         return f"Customer(Name: {self.name}, ID: {self.id}, Acc: {self.accounts})"
@@ -38,7 +38,12 @@ class Customer():
         else:
             print("Account not found.")
     
-    
+    #calculate customer balance:
+    def CalcCustBalance(self):
+        cust_total_balance = 0
+        for acc in self.accounts:
+            cust_total_balance+=acc.account_balance
+        return cust_total_balance
         
 
 
