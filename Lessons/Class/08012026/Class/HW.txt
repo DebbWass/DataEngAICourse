@@ -1,0 +1,26 @@
+https://www.w3resource.com/python-exercises/unittest/index.php
+1. Unit Test for Prime Number Checker
+Write a Python unit test program to check if a given number is prime or not.
+What is a prime number? - https://en.wikipedia.org/wiki/Prime_number
+ 
+ 
+2. Unit Test for Sorted List in Ascending Order
+Write a Python unit test program to check if a list is sorted in ascending order. Software testing tools
+hard: write a class named my_list and don't use the sort method
+ 
+ 
+3. Unit Test for Equality of Two Lists
+Write a Python unit test program that checks if two lists are equal.
+hard: don't use assert equale
+ 
+ 
+4. Unit Test for Palindrome String Checker
+Write a Python unit test program to check if a string is a palindrome.
+what is a palindrome? - https://en.wikipedia.org/wiki/Palindrome
+ 
+5. Unit Test for File Existence Checker
+Write a Python unit test program to check if a file exists in a specified directory. Software development kit
+* Check online without telling AI to write the code, how to work with files in python. You can do it!
+ 
+6. Unit Test for Floating-Point Calculation Accuracy
+Write a Python unit test that checks if a function handles floating-point calculations accurately.
